@@ -1,0 +1,9 @@
+<div>
+  {{ area | json }}
+</div>
+Area:{{ area.title }}
+<div style="border: 1px solid yellow">
+  <div *ngFor="let item of area.child">
+    <app-demo-block [block]="item"></app-demo-block>
+  </div>
+</div>

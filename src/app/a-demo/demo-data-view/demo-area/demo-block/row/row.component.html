@@ -1,0 +1,11 @@
+<div style="background: cadetblue">
+  <div>
+    {{ row | json }}
+  </div>
+
+  <div style="color: blue">Row - 行的数据:{{ row.title }}</div>
+
+  <div *ngFor="let item of row.child">
+    <app-box [box]="item"></app-box>
+  </div>
+</div>

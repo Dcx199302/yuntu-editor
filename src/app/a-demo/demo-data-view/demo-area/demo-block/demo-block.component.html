@@ -1,0 +1,10 @@
+<div style="background: papayawhip; padding: 3px">
+  <div>
+    {{ block | json }}
+  </div>
+  block区域:{{ block.title }}
+
+  <div *ngFor="let item of block.child">
+    <app-row [row]="item"></app-row>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div>
+  <div>{{ Data | json }}</div>
+</div>
+<hr />
+<div>
+  {{ Data.title }}
+  <hr />
+  <div>
+    {{ Data.child[0].title }}
+  </div>
+</div>
+
+<div>
+  <h1 style="color: Red">{{ Data.title }}</h1>
+  <div *ngFor="let item of Data.child">
+    <app-demo-area [area]="item"></app-demo-area>
+  </div>
+</div>
+
+<div>
+  <button
+    mat-mini-fab
+    color="accent"
+    aria-label="Example icon button with a plus one icon"
+    (click)="service.push()"
+  >
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>

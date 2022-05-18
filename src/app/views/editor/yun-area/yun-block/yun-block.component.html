@@ -1,0 +1,5 @@
+<h3>{{ block.title }}标题</h3>
+<hr />
+<ng-container *ngFor="let row of block.child">
+  <app-yun-row [row]="row"></app-yun-row>
+</ng-container>

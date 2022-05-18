@@ -1,0 +1,6 @@
+<div>row</div>
+<div style="display: flex">
+  <ng-container *ngFor="let box of row.child">
+    <app-yun-box [box]="box"></app-yun-box>
+  </ng-container>
+</div>
