@@ -1,0 +1,25 @@
+<ng-template #frameTemplate let-obj>
+  <div class="float">
+    <!-- 这是一个外框的指令模板:{{ obj.title + obj.subheading }} -->
+    <section>
+      <button mat-raised-button (click)="handleConsole($event, obj)">
+        {{ obj.self.title }}
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="handleCopy($event, obj)"
+      >
+        copy
+      </button>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="handleDelete($event, obj)"
+      >
+        delete
+      </button>
+    </section>
+  </div>
+  <!-- <div class="float">这是一个外框的指令模板:{{ obj.subheading }}</div> -->
+</ng-template>

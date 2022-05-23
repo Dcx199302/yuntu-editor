@@ -24,6 +24,9 @@ import { YunAreaComponent } from './views/editor/yun-area/yun-area.component';
 import { YunBlockComponent } from './views/editor/yun-area/yun-block/yun-block.component';
 import { YunRowComponent } from './views/editor/yun-area/yun-block/yun-row/yun-row.component';
 import { YunBoxComponent } from './views/editor/yun-area/yun-block/yun-row/yun-box/yun-box.component';
+import { FrameDirective } from './core/directive/frame.directive';
+import { FrameComponent } from './core/directive/frame/frame.component';
+import { ButtonComponent } from './views/widget/button/button.component';
 
 // Material的组件
 let Material = [MatExpansionModule, MatButtonModule, MatIconModule];
@@ -52,7 +55,11 @@ let YUNTU = [
     EditorComponent,
     SettingComponent,
     WidgetComponent,
-    ...YUNTU, //云图编辑器的嵌套页面
+    ...YUNTU,
+    FrameDirective,
+    FrameComponent,
+    ButtonComponent,
+    // PopUpComponent, //云图编辑器的嵌套页面
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import Block from 'src/app/core/model/block';
 import Row from 'src/app/core/model/row';
 
 @Component({
@@ -7,10 +8,20 @@ import Row from 'src/app/core/model/row';
   styleUrls: ['./yun-row.component.less'],
 })
 export class YunRowComponent implements OnInit {
-  @Input('row')
+  @Input('row') //自身的数据
   row: Row;
+
+  @Input('block') //父节点的数据
+  block: Block;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  flex: string = 'block';
+  wrap: string = 'nowrap';
+  ngOnInit(): void {
+    if (this.row.direction == 'horizontal') {
+      this.flex = 'flex';
+      this.wrap = 'wrap'; //nowrap
+    }
+  }
 }

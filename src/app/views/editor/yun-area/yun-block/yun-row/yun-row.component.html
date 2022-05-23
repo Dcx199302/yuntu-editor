@@ -1,6 +1,18 @@
-<div>row</div>
-<div style="display: flex">
-  <ng-container *ngFor="let box of row.child">
-    <app-yun-box [box]="box"></app-yun-box>
-  </ng-container>
+<div style="position: relative; width: 100%">
+  <div
+    class="row"
+    [appFrame]="row"
+    [parentNode]="block"
+    [style.display]="flex"
+    [style.flex-wrap]="wrap"
+  >
+    <!-- [style.flex-wrap]="wrap" -->
+    <ng-container *ngFor="let box of row.child">
+      <app-yun-box
+        style="flex: 1; min-width: 200px"
+        [box]="box"
+        [row]="row"
+      ></app-yun-box>
+    </ng-container>
+  </div>
 </div>

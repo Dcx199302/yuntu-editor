@@ -10,6 +10,6 @@ export default class Row {
   constructor(
     public title: string, //标题
     public direction: DIRECTION = 'horizontal', //方向-左右/上下
-    public child: Array<Box> | Row //一行或一列的子元素
+    public child: Array<Box> //一行或一列的子元素
   ) {}
 }

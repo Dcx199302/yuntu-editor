@@ -1,9 +1,11 @@
 <div class="area-container">
-  <h2>{{ area.title }}标题</h2>
-  <!-- <hr /> -->
-  <div style="background-color: #fff">
-    <ng-container *ngFor="let block of area.child">
-      <app-yun-block [block]="block"></app-yun-block>
-    </ng-container>
+  <div [appFrame]="area" [parentNode]="page">
+    <h2>{{ area.title }}标题</h2>
+    <!-- <hr /> -->
+    <div style="background-color: #fff">
+      <ng-container *ngFor="let block of area.child">
+        <app-yun-block [block]="block" [area]="area"></app-yun-block>
+      </ng-container>
+    </div>
   </div>
 </div>

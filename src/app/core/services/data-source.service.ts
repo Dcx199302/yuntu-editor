@@ -42,13 +42,16 @@ export class DataSourceService {
               new Array(
                 new Row(
                   '行',
-                  'horizontal',
+                  'vertical',
                   new Array(new Box('盒子', 'Widget组件'))
                 ),
                 new Row(
                   '行',
                   'horizontal',
-                  new Array(new Box('盒子', 'Widget组件'))
+                  new Array(
+                    new Box('盒子', 'Widget组件'),
+                    new Box('盒子2', 'Widget组件')
+                  )
                 )
               )
             )

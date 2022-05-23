@@ -1,12 +1,21 @@
 <div class="edit-container">
-  <div>{{ service | json }}</div>
+  <br /><br />
   <header class="header">
-    <h1>Hello YUNTU LowCode!!{{ service.getEditorInitData.title }}</h1>
+    <!-- <app-pop-up></app-pop-up> -->
+    <h1 [appFrame]="service.getEditorInitData">
+      Hello YunTU LowCode!!{{ service.getEditorInitData.title }}
+    </h1>
   </header>
 
+  <!-- <main > -->
   <main>
     <ng-container *ngFor="let area of service.getEditorInitData.child">
-      <app-yun-area [area]="area"></app-yun-area>
+      <app-yun-area
+        [area]="area"
+        [page]="service.getEditorInitData"
+      ></app-yun-area>
     </ng-container>
   </main>
+  <br /><br /><br />
+  <div>{{ service | json }}</div>
 </div>
