@@ -1,3 +1,21 @@
-<!-- <app-button></app-button> -->
+<div style="text-align: center">组件库</div>
+<br />
+<div
+  draggable="true"
+  (dragstart)="$event.dataTransfer.setData('Text', 'button')"
+>
+  <app-button></app-button>
+</div>
+<div
+  draggable="true"
+  (dragstart)="$event.dataTransfer.setData('Text', 'table')"
+>
+  <app-button></app-button>:table
+</div>
 
-这边放一些小组件
+<!-- <div
+  draggable="true"
+  (dragstart)="$event.dataTransfer.setData('Text', 'setting')"
+>
+  <app-table></app-table>
+</div> -->

@@ -1,9 +1,17 @@
 <div class="box">
   <div [appFrame]="box" [parentNode]="row">
-    <div>
-      <div class="placeholder">拖拽组件或模板到这里</div>
+    <div *ngIf="expression">
+      <div
+        class="placeholder"
+        (drop)="DragDropMountComponent($event)"
+        (dragover)="allowDrop($event)"
+      >
+        拖拽组件或模板到这里
+      </div>
     </div>
 
-    <ng-template #WidgetContainer></ng-template>
+    <div (click)="changeSettingView()">
+      <ng-template #WidgetContainer></ng-template>
+    </div>
   </div>
 </div>

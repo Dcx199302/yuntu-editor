@@ -26,10 +26,22 @@ import { YunRowComponent } from './views/editor/yun-area/yun-block/yun-row/yun-r
 import { YunBoxComponent } from './views/editor/yun-area/yun-block/yun-row/yun-box/yun-box.component';
 import { FrameDirective } from './core/directive/frame.directive';
 import { FrameComponent } from './core/directive/frame/frame.component';
-import { ButtonComponent } from './views/widget/button/button.component';
+import { ButtonComponent } from './core/widgets/button/button.component';
+import { ButtonSettingComponent } from './core/widgets/button-setting/button-setting.component';
+import { TableComponent } from './core/widgets/table/table.component';
+import { TableSettingComponent } from './core/widgets/table-setting/table-setting.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 // Material的组件
-let Material = [MatExpansionModule, MatButtonModule, MatIconModule];
+let Material = [
+  MatExpansionModule,
+  MatButtonModule,
+  MatIconModule,
+  MatTableModule,
+  MatRadioModule,
+];
 let DemoComponent = [
   DataDemoComponent,
   DemoDataViewComponent,
@@ -59,12 +71,15 @@ let YUNTU = [
     FrameDirective,
     FrameComponent,
     ButtonComponent,
-    // PopUpComponent, //云图编辑器的嵌套页面
+    ButtonSettingComponent,
+    TableComponent,
+    TableSettingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     ...Material,
   ],
   providers: [],

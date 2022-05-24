@@ -26,25 +26,25 @@ export class FrameDirective {
 
   @HostListener('mouseover', ['$event']) onMouseEnter(event: MouseEvent) {
     event.stopPropagation(); //冒泡
-    event.stopImmediatePropagation(); //捕获
-    if (event.target == this.el.nativeElement) {
-      if (this.el.nativeElement.style.border != '1px solid blue') {
-        this.el.nativeElement.style.position = 'relative';
-        this.el.nativeElement.style.border = '1px dashed blue';
-      }
+    // event.stopImmediatePropagation(); //捕获
+    // if (event.target == this.el.nativeElement) {
+    if (this.el.nativeElement.style.border != '1px solid blue') {
+      this.el.nativeElement.style.position = 'relative';
+      this.el.nativeElement.style.border = '1px dashed blue';
     }
+    // }
   }
 
   @HostListener('mouseout', ['$event']) onMouseLeave(event: MouseEvent) {
     // console.log('鼠标离开mouseover', event.target);
     event.stopPropagation(); //冒泡
-    event.stopImmediatePropagation(); //捕获
+    // event.stopImmediatePropagation(); //捕获
 
-    if (event.target == this.el.nativeElement) {
-      if (this.el.nativeElement.style.border != '1px solid blue') {
-        this.el.nativeElement.style.border = '1px dashed Transparent';
-      }
+    // if (event.target == this.el.nativeElement) {
+    if (this.el.nativeElement.style.border != '1px solid blue') {
+      this.el.nativeElement.style.border = '1px dashed Transparent';
     }
+    // }
   }
 
   @HostListener('click', ['$event']) handleClick(event: PointerEvent) {
