@@ -22,6 +22,7 @@ export class TableSettingComponent extends SettingAbstract implements OnInit {
   handleClick() {
     console.log(this.instance);
     this.data = this.instance.instance.dataSource;
+    this.data[0].name = 'hello world';
   }
 
   favoriteSeason: string;

@@ -63,7 +63,11 @@ export class DataSourceService {
                 new Row(
                   '行',
                   'vertical',
-                  new Array(new Box('盒子', 'table', { ...obj }))
+                  new Array(
+                    new Box('盒子', 'table', {
+                      ...JSON.parse(JSON.stringify(obj)), //注意数据的来源地址
+                    })
+                  )
                 ),
                 new Row(
                   '行',
