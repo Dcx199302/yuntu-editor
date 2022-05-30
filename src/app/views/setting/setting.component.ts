@@ -29,12 +29,14 @@ export class SettingComponent implements OnInit {
       }
       this.settingInstance = instance;
     });
+
+    // console.log(this.settingContainer,"能拿到呀")
   }
 
   ngAfterViewInit() {}
 
   // 设置部分
-  @ViewChild('settingContainer', { read: ViewContainerRef, static: false })
+  @ViewChild('settingContainer', { read: ViewContainerRef, static: true })
   settingContainer: ViewContainerRef;
 
   // instance: ComponentRef<any>;

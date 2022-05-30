@@ -18,13 +18,15 @@ export class FrameComponent implements OnInit {
   @Input('obj')
   obj: any;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.frameService.setTemplate(this.frameTemplate);
+  }
 
-  @ViewChild('frameTemplate')
+  @ViewChild('frameTemplate', { static: true })
   frameTemplate: TemplateRef<any>;
 
   ngAfterViewInit(): void {
-    this.frameService.setTemplate(this.frameTemplate);
+    // this.frameService.setTemplate(this.frameTemplate);
   }
 
   //

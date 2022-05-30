@@ -37,9 +37,10 @@ export class YunBoxComponent implements OnInit {
     if (this.box.Data) {
       this.expression = false;
     }
+    // console.log(this.WidgetContainer,"能拿到呀")
   }
 
-  @ViewChild('WidgetContainer', { read: ViewContainerRef, static: false })
+  @ViewChild('WidgetContainer', { read: ViewContainerRef, static: true })
   WidgetContainer: ViewContainerRef;
 
   ngAfterViewInit() {
